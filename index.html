@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jogo</title>
+        <link rel="stylesheet" href="./CSS/style.css">
+        <link rel="stylesheet" href="./CSS/jogo.css">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="page">
+            <div id="mainContent">
+                <header>
+                    <div class="logo">
+                        <img src="../media/logo.jpg" alt="Minesweeper Logo">
+                        <a href="index.html">Minesweeper</a>
+                    </div>
+                    <nav id="menuOculto" class="menuOculto">
+                        <a href="regras.html">Regras</a>
+                        <a href="registo.html" id="pgRegisto">Registo</a>
+                        <a href="login.html" id="pgLogin">Login</a>
+                        <a href="perfil.html" id="pgPerfil">Perfil</a>
+                        <a href="jogo.html" id="pgJogo">Jogar</a>
+                    </nav>
+                    <div id="principal">
+                        <span id="mobileMenuBtn">☰</span>
+                    </div>
+                </header>
+                <main>
+                    <div id="gameContainer">
+                        <div id="gameHeader">
+                            <div id="bandeiras">
+                                <span id="flagsLeftTitle">⚑</span>
+                                <span id="flagsLeft">10</span>
+                            </div>
+                            <img id="restartGameBtn" src="../media/normal.png" alt="Emoji reiniciar jogo"> 
+                            <span id="gameTiming">00:00</span>
+                            <div id="gameSettings">⚙</div>
+                        <section id="setDefinicoes" class="definicoes hidden">
+                            <h2>Definições</h2>
+                            <label for="modoDefault">Modo normal
+                                <input type="radio" name="dificuldade" id="modoDefault" checked>
+                            </label>
+                            <br>
+                            <label for="modoDificil">Modo díficil
+                                <input type="radio" name="dificuldade" id="modoDificil">
+                            </label>
+                            <br>
+                            <label for="contratempo">Alternar modo contra-o-tempo
+                                <input type="checkbox" id="contratempo">
+                            </label>
+                            <br>
+                            <label for="mudarTema">Alternar tema
+                                <input type="checkbox" id="mudarTema">
+                            </label>
+                            <br>
+                            <button class="btnSmall" id="submitDefinicoes">Confirmar</button>
+                        </section>
+                        </div>
+                        <div id="game"> 
+                        </div>
+                    </div>
+                    <div id="gameAudio">
+                        <audio class="hidden" id="gameOverAudio"><source src="../media/mixkit-8-bit-bomb-explosion-2811.wav" type="audio/wav"></audio> 
+                        <audio class="hidden" id="tileClickAudio"><source src="../media/mixkit-video-game-retro-click-237.wav" type="audio/wav"></audio>
+                        <audio class="hidden" id="winAudio"><source src="../media/mixkit-small-win-2020.wav" type="audio/wav"></audio> 
+                    </div>
+                    <br>
+                    <br>
+                    <div id="gameStats" class="hidden">
+                        <table id="tableStats">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Estatísticas</th> 
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="row1">
+                                    <th>Número de jogos</th>
+                                    <td>00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br>
+                </main>
+            </div>
+            <footer>
+                <p>2025 Minesweeper | <a href="creditos.html">Créditos</a></p>
+            </footer>
+        </div>
+        <script src="./JS/jogo.js"></script>
+	    <script src="./JS/script.js" ></script>
+    </body>
+</html>
