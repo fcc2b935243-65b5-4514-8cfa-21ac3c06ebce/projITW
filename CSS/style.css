@@ -1,0 +1,223 @@
+/* my classmate did most of this */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilização Geral */
+body {
+    background-color: #D3D3D3; 
+    text-align: center;
+    color: rgba(211, 211, 211, 0.5); /* Cor com opacidade #3d405b */
+	
+}
+
+footer, header {
+  font-size: 15pt;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #3d405b; 
+    color: white;
+    font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 90px;
+    margin-right: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a, footer a {
+    margin: 0 15px;
+	margin-left: 0;
+}
+
+header a:hover, footer a {
+    text-decoration: underline;
+}
+
+/* Conteúdo Principal */
+main {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos na vertical */
+    align-items: center; /* Centraliza os itens */
+    justify-content: center;
+    margin-top: 50px;
+}   
+
+.btnSmall {
+    display: inline-block;
+    padding: 3px 10px;
+    background-color: #9B111E;
+    color: white;
+    font-size: medium;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+    text-align: center;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    font-weight: bold
+}
+
+/* Tabelas */
+.row1 {
+    background-color: white;
+}
+
+.row2 {
+    background-color: lightblue;
+}
+
+td a {
+    color: midnightblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+thead {
+    background-color: lightsteelblue;
+}
+
+th, td, tr {
+    padding: 5px;
+    color: #3d405b !important;
+}
+
+/* Rodapé */
+#page {
+  position: relative; /* para o footer ser absolute */ 
+  min-height: 100vh;
+}
+
+#mainContent {
+  padding-bottom: 93px;    /* footer height */
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background-color: #3d405b;
+  color: white;
+}
+
+/* ========================= */
+/*      TELAS PEQUENAS       */
+/* ========================= */
+@media (max-width: 764px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        position: relative;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 70px;
+        margin-right: 10px;
+    }
+
+    /* Menu */
+    section span {
+        font-size: 30px;
+        cursor: pointer;
+        display: block; /* Exibe o ícone do menu apenas em telas menores */
+    }
+
+    .menuOculto {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: none;
+    }
+
+    #mobileMenuBtn {
+        padding: 16px;
+        font-size: 20pt;
+    }
+
+    /* ========================= */
+    /* CONTEÚDO PRINCIPAL - TELAS PEQUENAS */
+    /* ========================= */
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    main p {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+}
+
+/* ========================= */
+/*      TELAS MAIORES        */
+/* ========================= */
+@media (min-width: 764px) {
+    #principal {
+        display: none; /* Oculta o ícone do menu em telas maiores */
+    }
+
+    /* Mantém os estilos originais */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background-color: #3d405b; 
+        color: white;
+        font-weight: bold;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 90px;
+        margin-right: 10px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 15px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+}
