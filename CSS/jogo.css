@@ -1,0 +1,179 @@
+#game {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 60px); /* verificar se fica bem em outros tamanhos */
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-bottom: 50px; /* só por causa do áudio (exemplo) */
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#game div {
+    border: 2px black solid;
+    padding-top: 10px;
+}
+
+.naoRevelado {
+    background-color: slategray;
+}
+
+#game img {
+    height: 40px;
+    width: 40px;
+}
+
+#gameHeader {
+    display: flex;
+    justify-content: space-between;
+    height: 100px; 
+}
+
+#gameHeader img {
+    height: 100px;
+    cursor: pointer;
+    margin-left: 45pt;
+}
+
+.definicoes, #bandeiras {
+    color: #3d405b;
+}
+
+input, label {
+    width: 2vw;
+    height: 2vh;
+    font-size: large;
+    cursor: pointer;
+}
+
+#setDefinicoes {
+    position: absolute;
+    top: 18%;
+    right: 19%;
+    background-color: white;
+    padding: 5px;
+}
+
+.revelado.mine {
+    background-color: red !important;
+    background-image: url(../media/bomba.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+}
+
+.revelado.natureMine {
+    background-color: red !important;
+    background-image: url(../media/mode_heat.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+}
+
+.revelado.tile {
+    pointer-events: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.gameOver {
+    pointer-events: none;
+}
+
+#flagsLeftTitle {
+    display: inline-block;
+}
+
+.flag {
+    background-color: #FFFD75;
+    background-image: url(../media/Minesweeper_flag.svg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.natureFlag {
+    background-color: #FFFD75;
+    background-image: url(../media/emoji_nature.png);
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+#gameTiming, #flagsLeft, #flagsLeftTitle, #gameSettings {
+    font-family: monospace, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    font-weight: 800;
+    font-size: 50pt;
+}
+
+#bandeiras {
+    width: 130px;
+    top: 10px;
+    position: relative;
+}
+
+#gameTiming {
+    width: 190px;
+    top: 20px;
+    position: relative;
+}
+
+/* botao das definicoes */
+.btnSmall {
+    margin-top: 0px;
+    cursor: pointer; 
+}
+
+#gameSettings, #setDefinicoes {
+    user-select: none; /* prever 'bugs' */
+}
+
+#gameSettings {
+    cursor: pointer;
+}
+
+#flagNatureIcon {
+    font-size: xxx-large;
+}
+
+/* ========================= */
+/*       TELAS PEQUENAS      */
+/* ========================= */
+@media (max-width: 800px) {
+    #game {
+        grid-template-rows: repeat(9, 45px);
+    }
+
+    #game img {
+        top: 15px;    
+    }
+
+    #gameHeader img {
+        position: relative;
+        margin-left: 0;    
+    }
+
+    #gameSettings {
+        position: relative;
+        top: -40px;
+    }
+
+} 
+
+/* ========================= */
+/*      TELAS MAIORES        */
+/* ========================= */
+@media (min-width: 800px) {
+    #gameContainer {
+        width: 70%;
+    }
+
+    #gameSettings {
+        position: absolute;
+        top: 90pt;
+        left: 81.5%;
+    }
+}
